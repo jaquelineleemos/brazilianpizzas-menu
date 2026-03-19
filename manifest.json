@@ -1,0 +1,8 @@
+{
+  "name": "Brazilian Pizzas Menu",
+  "short_name": "Menu",
+  "display": "standalone",
+  "start_url": "./index.html",
+  "background_color": "#050505",
+  "theme_color": "#050505"
+}
