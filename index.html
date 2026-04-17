@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="theme-color" content="#050505">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Brazilian Pizzas Menu</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="hide-ui">
+  <div id="app">
+    <div id="overlay" aria-live="polite">
+      <div class="rotate-card">
+        <div class="rotate-icon">
+          <div class="rotate-arrow"></div>
+          <div class="phone"></div>
+        </div>
+        <div class="rotate-texts">
+          <div class="rotate-kicker">Viewing tip</div>
+          <div id="overlayText">Gire o smartphone para a horizontal para uma visualização mais elegante.</div>
+          <div class="rotate-sub">Toque em qualquer lugar para continuar.</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="topActions" class="chrome top-actions" aria-label="Ações da tela">
+      <button type="button" id="fullscreenBtn" class="icon-btn" aria-label="Tela cheia" title="Tela cheia">
+        <span class="icon icon-fullscreen" aria-hidden="true"></span>
+      </button>
+      <button type="button" id="exitLandscapeBtn" class="icon-btn" aria-label="Voltar ao modo vertical" title="Voltar ao modo vertical">
+        <span class="icon icon-portrait" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <div id="tapLeft" class="tapzone left" aria-label="Página anterior"></div>
+    <div id="tapRight" class="tapzone right" aria-label="Próxima página"></div>
+
+    <main id="viewer" aria-label="Cardápio">
+      <div id="bookStage">
+        <div id="pageWrap">
+          <div id="pageShadow"></div>
+          <div id="pageFold"></div>
+          <img id="menuImage" alt="Página do cardápio">
+          <a id="waButton" class="wa-button chrome" href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"></a>
+        </div>
+      </div>
+    </main>
+
+    <div id="controls" class="chrome">
+      <div class="control-group">
+        <button type="button" id="prevBtn" aria-label="Página anterior">◀</button>
+        <button type="button" id="nextBtn" aria-label="Próxima página">▶</button>
+      </div>
+      <div class="control-group">
+        <button type="button" id="zoomOutBtn" aria-label="Diminuir zoom">－</button>
+        <span id="zoomLabel">100%</span>
+        <button type="button" id="zoomInBtn" aria-label="Aumentar zoom">＋</button>
+      </div>
+      <div class="control-group lang-group">
+        <button type="button" id="langPT" aria-label="Português">🇧🇷 PT</button>
+        <button type="button" id="langEN" aria-label="English">🇺🇸 EN</button>
+      </div>
+    </div>
+
+    <div id="pageDots" class="chrome page-dots" aria-label="Paginação"></div>
+    <div id="edgeArrowLeft" class="edge-arrow edge-arrow-left" aria-hidden="true"></div>
+    <div id="edgeArrowRight" class="edge-arrow edge-arrow-right" aria-hidden="true"></div>
+    <div id="rotationToast" aria-live="polite"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
